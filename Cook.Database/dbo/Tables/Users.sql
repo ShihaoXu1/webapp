@@ -8,8 +8,11 @@
     [RegisterTime] ROWVERSION     NULL,
     [Activity]     BIT            NOT NULL,
     [UserRole]     INT            NOT NULL,
-    CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED ([UserId] ASC)
+    CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED ([UserId] ASC),
+    CONSTRAINT [fk_Users_Roles] FOREIGN KEY ([UserRole]) REFERENCES [dbo].[Roles] ([UserRole])
 );
+
+
 
 
 
