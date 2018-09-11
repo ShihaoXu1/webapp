@@ -1,10 +1,12 @@
 ﻿CREATE TABLE [dbo].[Blocks] (
-    [BlockId]    INT            IDENTITY (1, 1) NOT NULL,
-    [Visibility] BIT            NOT NULL,
-    [Name]       NVARCHAR (100) NOT NULL,
-    [Brief]      NVARCHAR (200) NULL,
+    [BlockId]           INT            IDENTITY (1, 1) NOT NULL,
+    [Visible]           BIT            NULL,
+    [BlockIntroduction] NVARCHAR (500) NULL,
+    [BlockName]         NVARCHAR (200) NOT NULL,
     PRIMARY KEY CLUSTERED ([BlockId] ASC)
 );
+
+
 
 
 
