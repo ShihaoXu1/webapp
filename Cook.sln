@@ -17,6 +17,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Cook.Database", "Cook.Datab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cook.Common", "Cook.Common\Cook.Common.csproj", "{4CD02450-6E4E-4B76-9055-8C54661C0019}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naming", "Naming\Naming.csproj", "{69A26ACC-E568-40BA-ADB0-A076D5869789}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,8 +55,15 @@ Global
 		{4CD02450-6E4E-4B76-9055-8C54661C0019}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CD02450-6E4E-4B76-9055-8C54661C0019}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CD02450-6E4E-4B76-9055-8C54661C0019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69A26ACC-E568-40BA-ADB0-A076D5869789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A26ACC-E568-40BA-ADB0-A076D5869789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A26ACC-E568-40BA-ADB0-A076D5869789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A26ACC-E568-40BA-ADB0-A076D5869789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9BED18D-5658-4522-A159-47D0C99E0F46}
 	EndGlobalSection
 EndGlobal
