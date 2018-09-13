@@ -13,7 +13,40 @@
 
 3.object relational mapping
   (1)one to many: 
-  
+  常见的关系映射，比如球员与球队，学生与班级的关系，
+每一个学生（队员）只属于一个班级（球队），每一个
+班级（球队）可以拥有多个学生。
+建立关系：
+ StudentTable
+ --------------
+|StudentNumber | 
+ --------------
+|StudentName   |                         ClassTable
+ --------------                          -----------
+| ClassNumber  |---> as foreign key <---|ClassNumber|--->primary key
+ --------------      of StudentTable     -----------
   (2)one to one:
-  
+  比如学校的地址，一个学校只能有一个地址。
+
+SchoolTable                           SchoolAddress
+ ------------                         ---------------
+|SchoolNumber|---> as foreign key<---| SchoolNumber  |
+ ------------      of SchoolTable     ---------------
+| SchoolName |                       |   City        |
+ ------------                         ---------------
   (3)many to many:
+  这个也是很常见的关系，比如学生和选修课，一个学生可以有多个选修课，并且
+  一个选修课也可以被多个学生选择，比如：
+  StudentTable
+ --------------
+|StudentName   |                         Course_Student
+ --------------                          -------------
+| StudentNumber|---> as foreign key <---|StudentNumber|--->primary key
+ --------------      of Course_Student   -------------
+                                        | CourseNumber| 
+CourseTable                              -------------
+ ------------                              |
+| CourseName |---> as foreign key <--------|
+ ------------      of Course_Student
+|CourseNumber|
+ ------------
