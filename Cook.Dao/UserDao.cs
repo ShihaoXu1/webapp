@@ -21,12 +21,12 @@ namespace Cook.Dao
                 {
                     response.Items = context.Users.Select(n => new UserContract()
                     {
-                        FirstName = n.FirstName,
-                        LastName = n.LastName
+                        UserName = n.UserName,
+                        Email = n.Email
                     }).ToList();
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 response.Success = false;
             }

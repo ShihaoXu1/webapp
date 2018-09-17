@@ -5,7 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e7571b913d63460cb336aa92b6a685d1" Name="Diagram1">
-        <EntityTypeShape EntityType="CookModel.User" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CookModel.Category" Width="1.5" PointX="5.75" PointY="1.375" />
+        <EntityTypeShape EntityType="CookModel.Comment" Width="1.5" PointX="10.25" PointY="1.125" />
+        <EntityTypeShape EntityType="CookModel.Gender" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="CookModel.Post" Width="1.5" PointX="8" PointY="1" />
+        <EntityTypeShape EntityType="CookModel.UserRole" Width="1.5" PointX="0.75" PointY="1.75" />
+        <EntityTypeShape EntityType="CookModel.User" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="CookModel.FK_Posts_Categories" />
+        <AssociationConnector Association="CookModel.FK_Comments_Posts" />
+        <AssociationConnector Association="CookModel.FK_Users_Gender" />
+        <AssociationConnector Association="CookModel.FK_Users_UserRoles1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -12,8 +12,11 @@ namespace Cook.Web.ViewModels.Account
 
         public void Import(List<UserContract> users)
         {
-            if(users.Any())
-                UserNames = users.Select(n => n.FirstName + " " + n.LastName).ToList();
+            if (users.Any())
+            {
+                UserNames = users.Select(n => n.UserName + " " + n.Email).ToList();
+            }
         }
+
     }
 }

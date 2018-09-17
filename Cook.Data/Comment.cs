@@ -12,19 +12,15 @@ namespace Cook.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Comment
     {
+        public int ReplyId { get; set; }
+        public string CommentContent { get; set; }
+        public Nullable<int> PostId { get; set; }
         public int UserId { get; set; }
-        public string PasswordHash { get; set; }
-        public Nullable<int> GenderId { get; set; }
-        public string Email { get; set; }
-        public bool Active { get; set; }
-        public string UserName { get; set; }
-        public string BriefInstroduction { get; set; }
-        public Nullable<System.DateTime> RegisterTime { get; set; }
-        public int UserRoleId { get; set; }
+        public Nullable<System.DateTime> Replytime { get; set; }
+        public bool Visible { get; set; }
     
-        public virtual Gender Gender { get; set; }
-        public virtual UserRole UserRole { get; set; }
+        public virtual Post Post { get; set; }
     }
 }
