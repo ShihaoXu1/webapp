@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>This is a user list page</h2>
+<h2>This is a user list </h2>
 
 <ul>
     @if (Model.UserNames.Any())
@@ -17,5 +17,20 @@
     else
     {
         <li>No Users in Database!</li>
+    }
+</ul>
+<h2>This is a category list </h2>
+
+<ul>
+    @if (Model.Categories.Any())
+    {
+        foreach (var name in Model.Categories)
+        {
+            <li>@name</li>
+        }
+    }
+    else
+    {
+        <li>No Categories in Database!</li>
     }
 </ul>

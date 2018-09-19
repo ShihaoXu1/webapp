@@ -13,11 +13,12 @@ namespace Cook.Web.Controllers
         // GET: Account
         public ActionResult Index()
         {
-            var daoResponse = AccountAdapter.GetAllUsers();
-            if (daoResponse.Success)
+            var daoResponse1 = AccountAdapter.GetAllUsers();
+            var daoResponse2 = AccountAdapter.GetAllCategories();
+            if (daoResponse1.Success)
             {
                 var vm = new IndexViewModel();
-                vm.Import(daoResponse.Items);
+                vm.Import(daoResponse1.Items,daoResponse2.Items);
                 return View(vm);
             }
 

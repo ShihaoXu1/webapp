@@ -1,6 +1,7 @@
 ﻿using Cook.Common;
 using Cook.Dao;
 using Cook.DataContracts.Account;
+using Cook.DataContracts.Category;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,10 @@ namespace Cook.Adapter
         public static ListResponse<UserContract> GetAllUsers()
         {
             return new UserDao().GetAllUsers();
+        }
+        public static ListResponse<CategoryContract> GetAllCategories()
+        {
+            return new CategoryDao().GetAllCategory();
         }
     }
 }
